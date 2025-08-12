@@ -6,6 +6,11 @@ body {
   color: #333;
   text-align: center;
 }
+h1 {
+  font-family: 'Courier New', Courier, monospace;
+  color: #ffffff;
+  margin-top: 20px;
+}
 
 header {
   range: url('image/logo.jpg');
