@@ -1,25 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playwrite+HU:wght@100..400&display=swap" rel="stylesheet">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mountain Café </title>
+  <title>Mountain Café</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Splash Screen styles */
+    #splash {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: #733207; /* same as header bg */
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      font-family: Arial, sans-serif;
+    }
+
+    #splash img {
+      width: 150px;
+      height: auto;
+      border-radius: 20%;
+      margin-bottom: 20px;
+    }
+
+    #splash h1 {
+      font-size: 3rem;
+      margin: 0;
+      font-weight: bold;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+  </style>
 </head>
 <body>
-  <header>
-  <div class="header-right">
-    <img src="image/logo.jpg" alt="Mountain Cafe Logo" class="logo" />
-    <div class="phone-numbers">
-      <h2>☎️ 0916075743</h2>
-      <h2>☎️ 0966769999</h2>
-    </div>
+  <!-- Splash Screen -->
+  <div id="splash">
+    <img src="image/logo.jpg" alt="Mountain Cafe Logo" />
+    <h1>Welcome to Mountain Café</h1>
   </div>
-</header>
 
+  <!-- Main content -->
+  <header>
+    <div class="header-right">
+      <img src="image/logo.jpg" alt="Mountain Cafe Logo" class="logo" />
+      <div class="phone-numbers">
+        <h2>☎️ 0916075743</h2>
+        <h2>☎️ 0966769999</h2>
+      </div>
+    </div>
+  </header>
 
   <main>
     <section class="menu-section">
@@ -31,7 +63,6 @@
     <section class="menu-section">
       <img src="image/3.JPG" alt="Cafe Menu Page 3" />
     </section>
-
     <section class="menu-section">
       <img src="image/4.JPG" alt="Cafe Menu Page 4" />
     </section>
@@ -41,5 +72,17 @@
     <p>© 2025 Mountain Café. All rights reserved.</p>
     <p>Eliana software Solutions <br> 0913210670 <br> 0939976687</p>
   </footer>
+
+  <script>
+    // Hide splash after 3 seconds
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        const splash = document.getElementById('splash');
+        splash.style.opacity = '0';
+        splash.style.transition = 'opacity 0.5s ease';
+        setTimeout(() => splash.style.display = 'none', 500);
+      }, 1000);
+    });
+  </script>
 </body>
 </html>
