@@ -9,7 +9,8 @@ body {
 h1 {
   font-family: 'Courier New', Courier, monospace;
   color: #ffffff;
-  margin-top: 20px;
+  margin-top: 10px;
+  font-size: 15px;
 }
 
 header {
