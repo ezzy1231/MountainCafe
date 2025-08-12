@@ -58,3 +58,13 @@ footer {
   font-size: 0.9em;
   margin-top: 20px;
 }
+h2 a[href^="tel"] {
+  color: inherit;      /* Use the same color as surrounding text */
+  text-decoration: none; /* Remove underline */
+}
+
+a[href^="tel"] {
+  color: inherit;      /* Use the same color as surrounding text */
+  text-decoration: none; /* Remove underline */
+}
+
